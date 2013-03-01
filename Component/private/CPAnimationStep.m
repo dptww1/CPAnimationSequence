@@ -52,7 +52,7 @@
 
 // From http://stackoverflow.com/questions/4007023/blocks-instead-of-performselectorwithobjectafterdelay
 + (void) runBlock:(AnimationStep)block afterDelay:(NSTimeInterval)delay {
-	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC*delay), dispatch_get_current_queue(), block);
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC*delay), dispatch_get_main_queue(), block);
 }
 
 - (NSArray*) animationStepArray {
